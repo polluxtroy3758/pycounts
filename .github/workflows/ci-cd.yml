@@ -1,0 +1,29 @@
+name: ci-cd
+
+on:
+  push:
+    branches:
+      - main
+  pull-request:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - uses: actions/checkout@v2
+      - uses: snok/install-poetry@v1
+      - name: Install package
+        run: poetry install
+      - name: Test with pytest
+        run: poetry run pytest tests/ --cov=pycounts_polluxtroy3758 --cov-report=xml
+      - uses: codecov/codecov-action@v2
+        with:
+          files: ./coverage.xml
+          fail_ci_if_error: true
+      - name: Build documentation
+        run: poetry run make html --directory docs/
