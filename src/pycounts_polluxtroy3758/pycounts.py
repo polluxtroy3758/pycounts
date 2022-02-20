@@ -19,7 +19,7 @@ def load_text(input_file: str):
     --------
     >>> load_text("text.txt")
     """
-    with open(input_file, "r") as file:
+    with open(input_file, "r", encoding="utf8") as file:
         text = file.read()
     return text
 
