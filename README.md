@@ -1,5 +1,7 @@
 # pycounts_polluxtroy3758
 
+![Codecov](https://img.shields.io/codecov/c/github/polluxtroy3758/pycounts?style=flat-square&token=P886C1C970) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/polluxtroy3758/pycounts/ci-cd?style=flat-square) ![Read the Docs](https://img.shields.io/readthedocs/pycounts_polluxtroy3758?style=flat-square) ![PyPI - License](https://img.shields.io/pypi/l/pycounts-polluxtroy3758?style=flat-square)
+
 Calculate word counts in a text file!
 
 ## Installation
